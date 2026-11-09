@@ -1,0 +1,10 @@
+
+Design Memo: Social Network Graph
+
+A graph is the best data structure for representing a social network because it allows people to be represented as nodes and friendships to be represented as edges. In a social network, people can have many different friendships, and those relationships can change over time. A graph makes it easier to add people, connect friends, and see how everyone is connected.
+
+A list would not work as well because it mainly stores information in a sequence. It would be harder to keep track of all the different friendships between people. A tree would also be a poor choice because trees usually have a parent-and-child structure. Social networks do not work that way because one person can have many friends without being above or below another person.
+
+One performance trade-off I noticed was that adding a friendship requires updating both people's friend lists. This is necessary because friendships are bidirectional. Checking whether someone is already a friend also takes time because the program searches through the person's friend list. Printing the network requires going through every person and displaying their connections. As the network grows, printing more friendships will take additional time.
+
+Overall, using an adjacency list is a good choice because it stores only the friendships that actually exist. This saves memory compared to an adjacency matrix, especially when a social network has many users but each person only knows a small percentage of them.
